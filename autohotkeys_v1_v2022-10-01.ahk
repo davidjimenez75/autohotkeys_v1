@@ -33,7 +33,7 @@ Pause::Send {Media_Play_Pause}     ; Pause multimedia = Pause
 #t:: 
 FormatTime, DateToUse, , yyyy-MM-dd--hhmm--
 FileCreateDir, %A_Desktop%\%DateToUse%
-FileAppend, # README`n, %A_Desktop%\%DateToUse%\README.md
+FileAppend, , %A_Desktop%\%DateToUse%\HEADER.md
 Return
 
 
