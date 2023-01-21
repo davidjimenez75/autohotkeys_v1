@@ -20,11 +20,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;| MULTIMEDIA AND VOLUME  |  Pause = Pause | Win + Mouse Scroll = Volume up/down | Win + Page Up/Down  = Next/Prev track |
 ;-------------------------------------------------------------------------------------------------------------------------
 Pause::Send {Media_Play_Pause}     ; Pause multimedia = Pause
-ScrollLock:: Send {Volume_Mute}    ; ScrollLock       = Mute
 #PgUp::Send {Media_Prev}           ; Previous song    = Win + Page Up
 #PgDn::Send {Media_Next}           ; Next song        = Win + Page Down
 #WheelUp::Send  {Volume_Up}        ; Volume up        = Win + Mouse Scroll Up 
 #WheelDown::Send {Volume_Down}     ; Volume up        = Win + Mouse Scroll Down
+
+; ScrollLock       = Mute 30 seconds
+ScrollLock:: 
+Send {Volume_Mute}
+Sleep 30000
+Send {Volume_Mute}
+Return
 
 
 
