@@ -1,4 +1,4 @@
-﻿; autohotkeys_v1_v2022-10-01
+﻿; autohotkeys_v1_v2023-01-21
 ;
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -20,6 +20,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;| MULTIMEDIA AND VOLUME  |  Pause = Pause | Win + Mouse Scroll = Volume up/down | Win + Page Up/Down  = Next/Prev track |
 ;-------------------------------------------------------------------------------------------------------------------------
 Pause::Send {Media_Play_Pause}     ; Pause multimedia = Pause
+ScrollLock:: Send {Volume_Mute}    ; ScrollLock       = Mute
 #PgUp::Send {Media_Prev}           ; Previous song    = Win + Page Up
 #PgDn::Send {Media_Next}           ; Next song        = Win + Page Down
 #WheelUp::Send  {Volume_Up}        ; Volume up        = Win + Mouse Scroll Up 
