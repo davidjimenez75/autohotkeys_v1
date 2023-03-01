@@ -21,6 +21,12 @@ Volume up        = Win + Mouse Scroll Up
 Volume up        = Win + Mouse Scroll Down
 ```
 
+## MUTE AUDIO XX SECONDS  
+
+```
+ScrollLock 
+```
+
 ## DESKTOP CREATE FOLDER "YYYY-MM-DD--HHMM--"
 
 ```
@@ -32,3 +38,13 @@ Win + T
 ```
 Ctrl + Shift + S
 ```
+
+## CLOSE CURRENT WINDOW  
+
+```
+Escape Escape
+```
+
+
+
+

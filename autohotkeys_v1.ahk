@@ -1,4 +1,4 @@
-﻿; autohotkeys_v1_v2023-01-21
+﻿; autohotkeys_v1_v2023-03-01
 ;
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -25,10 +25,12 @@ Pause::Send {Media_Play_Pause}     ; Pause multimedia = Pause
 #WheelUp::Send  {Volume_Up}        ; Volume up        = Win + Mouse Scroll Up 
 #WheelDown::Send {Volume_Down}     ; Volume up        = Win + Mouse Scroll Down
 
-; ScrollLock       = Mute 30 seconds
+;---------------------------------------
+;| MUTE AUDIO XX SECONDS  | ScrollLock |
+;---------------------------------------
 ScrollLock:: 
 Send {Volume_Mute}
-Sleep 30000
+Sleep 30000		; ScrollLock       = Mute 30 seconds
 Send {Volume_Mute}
 Return
 
@@ -88,8 +90,13 @@ Return
 
 
 
-
-
+;---------------------------------
+;| CLOSE CURRENT WINDOW  | ESCx2 |
+;---------------------------------
+~Escape::
+  If (A_ThisHotkey=A_PriorHotkey && A_TimeSincePriorHotkey<250)
+    Send !{F4}
+return
 
 
 
